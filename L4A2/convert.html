@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert</title>
+</head>
+<body style="margin: 0px; padding: 0px;">
+
+    <div class="container" style="text-align: center;  background-image: url(view/space.jpg); height: 100vh; width: 100%; color: aliceblue; position: relative;">
+        
+        <div class="cnt" style="border: 1px solid white; width: 25%; margin-left: 35%; position: absolute; top: 7vh;">
+
+
+            <div class="l1">
+                <label for="" style="padding: 5px; margin-right: 20px; margin-top: 6vh; ">BDT :</label>
+
+                <input type="text" id="taka" style="padding: 5px; width: 200px; margin-top: 6vh; "> &nbsp;  &nbsp; &nbsp;  &nbsp;
+
+                <button type="submit" id="btn" style="padding: 5px; margin-top: 6vh;">Convert</button><br><br>
+            </div>
+
+            <div class="l1">
+                <label for="" style="padding: 5px; margin-right: 23px; ">USD :</label>
+
+                <input type="text" id="dollar" style="padding: 5px; width: 200px;">&nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;
+
+                
+            </div>
+            <br><br>
+            <div class="l1">
+                <label for="" style="padding: 5px; margin-left: 5px; ">EURO :</label>
+
+                <input type="text" id="euro" style="padding: 5px; width: 200px;">&nbsp;  &nbsp; &nbsp;  &nbsp;
+
+                
+            </div>
+            <br><br>
+            <div class="l1">
+                <label for="" style="padding: 5px; margin-right: 15px; ">CAD :</label>
+
+                <input type="text" id="cad" style="padding: 5px; width: 200px;">&nbsp;  &nbsp; &nbsp;  &nbsp;
+
+                
+            </div>
+            <br><br>
+            <div class="l1">
+                <label for="" style="padding: 5px; margin-right: 15px; left: 0px;">INR :</label>
+
+                <input type="text" id="inr" style="padding: 5px; width: 200px;">&nbsp;  &nbsp; &nbsp;  &nbsp;
+
+                
+            </div>
+        </div>
+
+    </div>
+
+    
+
+
+    <script>
+      let taka= document.getElementById('taka')
+      let dollar= document.getElementById('dollar')
+      let euro= document.getElementById('euro')
+      var b1 = document.getElementById('btn')
+      var b2 = document.getElementById('btn1')
+      var b3 = document.getElementById('btn2')
+      var b4 = document.getElementById('btn3')
+      var b5 = document.getElementById('btn4')
+
+
+       b1.addEventListener('click',(e)=>{
+           e.preventDefault()
+            dollar.value = taka.value/84.86
+            euro.value = taka.value/91.91
+            cad.value = taka.value/64.05
+            inr.value = taka.value/1.12
+         
+       })
+       b2.addEventListener('click',(e)=>{
+           e.preventDefault()
+            taka.value = dollar.value*84.86
+            euro.value = dollar.value/0.96
+            cad.value = dollar.value*1.33
+            inr.value = dollar.value*71.73
+       })
+       b3.addEventListener('click',(e)=>{
+           e.preventDefault()
+            taka.value = euro.value*91.95
+            dollar.value = euro.value*1.18
+            cad.value = euro.value*1.44
+            inr.value = euro.value*77.47
+       })
+       b4.addEventListener('click',(e)=>{
+           e.preventDefault()
+            taka.value = cad.value*64.74
+            dollar.value = cad.value/0.75
+            euro.value = cad.value/0.7
+            inr.value = cad.value*53.98
+       })
+       /*b5.addEventListener('click',(e)=>*/{
+           e.preventDefault()
+            taka.value = inr.value*1.18
+            dollar.value = inr.value*0.014
+            euro.value = inr.value*0.013
+            cad.value = inr.value*0.019
+       }
+       
+    </script>
+</body>
+</html>

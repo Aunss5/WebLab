@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Generator</title>
+</head>
+<body onload="myFunction()"> 
+    
+    <div style="text-align:center; font-size: 30px; font-family: sans-sarif; margin-top: 5vh;">
+    <p id="text"></p>
+    </div>
+</body>
+    <script>
+        let showQuotes = document.querySelector('#text')
+        let quotes = ['Hello','Welcome']
+        let random = Math.floor(Math.random() * 2);
+        function myFunction(){
+            showQuotes.innerHTML= quotes[random];
+        }
+    </script>
+    <div>
+        <ul>
+            <button type="button" class="btn btn-outline-secondary"><a href="convert.html"target="blank">Converter</button><br><br>
+            <button type="button" class="btn btn-outline-secondary"><a href="quiz.html" target="blank">Quiz</a></button>
+        </ul>
+    </div>
+</html>
